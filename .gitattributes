@@ -1,0 +1,6 @@
+# Shell scripts must stay LF in every checkout: CRLF breaks the shebang
+# (`#!/usr/bin/env bash\r` has no interpreter) and bash itself.
+*.sh text eol=lf
+*.ps1 text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
