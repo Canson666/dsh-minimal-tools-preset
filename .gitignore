@@ -1,0 +1,6 @@
+# Editor and OS junk
+.DS_Store
+Thumbs.db
+*.swp
+
+# Nothing else: the preset files themselves are the product.
