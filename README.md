@@ -92,6 +92,9 @@ the host `subagents` registry and needs no realm.
 - Windows and Unix both work: the `!!js` skill-root expression resolves
   `skills/` relative to the preset's own directory (`baseUrl`), so the copy
   works from any install location.
+- **Shell is platform-split**: on Unix the persistent bash PTY chain is used;
+  on Windows there is no bash PTY backend, so the preset disables it and uses
+  the one-shot `tool-pwsh` instead (the same row `standard` uses on Windows).
 
 ## License
 

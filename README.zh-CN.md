@@ -72,6 +72,7 @@ dsh agent-presets standingKeyFor minimal-tools   # 必须能解析,无报错
 
 - 需要随 DeepSeek Harness 一起发布的 `minimal` 和 `standard` 预设(这里引用的 `@deepseek-ai/dsh-*` 插件行随 harness 发布)。
 - Windows 和 Unix 均可用:`!!js` 技能根表达式相对预设自身目录(`baseUrl`)解析 `skills/`,因此从任何安装位置复制都能工作。
+- **Shell 按平台拆分**:Unix 上使用持久 bash PTY 链;Windows 上没有 bash PTY 后端,预设会禁用它并改用一次性 `tool-pwsh`(与 `standard` 在 Windows 上使用的同一行)。
 
 ## 许可证
 
