@@ -37,7 +37,7 @@ PowerShell (Windows):
 irm https://raw.githubusercontent.com/Canson666/dsh-minimal-tools-preset/main/install.ps1 | iex
 ```
 
-or download and run locally:
+or, from a checkout of this repo:
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\install.ps1
@@ -47,9 +47,13 @@ Bash (macOS / Linux):
 
 ```bash
 bash <(curl -sL https://raw.githubusercontent.com/Canson666/dsh-minimal-tools-preset/main/install.sh)
-# or locally:
+# or, from a checkout of this repo:
 bash install.sh
 ```
+
+The scripts install from the local `minimal-tools/` folder when they find it
+next to themselves (a checkout), and download it from GitHub otherwise — so
+the one-command forms work anywhere.
 
 ### Option B: manual copy
 
@@ -66,13 +70,11 @@ created after the files are in place see the packs, including `code-review`).
 
 ## Verify
 
-In the new session, the skill list should include `code-review`, and the tool
-list should show file-search, web-search, and plan tools alongside the minimal
-`bash` + editor. To check without a session, run:
-
-```bash
-dsh agent-presets standingKeyFor minimal-tools   # must resolve, no error
-```
+Start a **new** session in the GUI and pick **极简+工具包**: the tool list
+should show file-search, web-search, and plan tools alongside the minimal
+`bash` + editor, and the skill list should include `code-review`. The session
+record also stamps the preset id (`agentPreset: minimal-tools`) in its log
+header, so you can confirm which preset a session actually runs.
 
 ## How the code-review pack works
 

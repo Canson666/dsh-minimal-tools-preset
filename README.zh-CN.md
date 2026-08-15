@@ -32,7 +32,7 @@ PowerShell(Windows):
 irm https://raw.githubusercontent.com/Canson666/dsh-minimal-tools-preset/main/install.ps1 | iex
 ```
 
-或下载后本地运行:
+或在仓库 checkout 目录下运行:
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\install.ps1
@@ -42,9 +42,11 @@ Bash(macOS / Linux):
 
 ```bash
 bash <(curl -sL https://raw.githubusercontent.com/Canson666/dsh-minimal-tools-preset/main/install.sh)
-# 或本地运行:
+# 或在仓库 checkout 目录下运行:
 bash install.sh
 ```
+
+脚本在自身旁边找到 `minimal-tools/` 目录时(即 checkout 场景)从本地安装,否则自动从 GitHub 下载——因此一键命令在任何目录都能用。
 
 ### 方式 B:手动复制
 
@@ -58,11 +60,7 @@ cp -r minimal-tools "$HOME/.dsh/.agent-presets/"
 
 ## 验证
 
-新会话中,技能列表应包含 `code-review`,工具列表应包含文件搜索、网页搜索和计划工具,以及极简内核的 `bash` + 编辑器。不开会话也可用命令验证:
-
-```bash
-dsh agent-presets standingKeyFor minimal-tools   # 必须能解析,无报错
-```
+在 GUI **新建会话**,选择 **极简+工具包**:工具列表应包含文件搜索、网页搜索和计划工具,以及极简内核的 `bash` + 编辑器;技能列表应包含 `code-review`。会话记录还会在日志头部打上预设 id(`agentPreset: minimal-tools`),可以用来确认会话实际运行的预设。
 
 ## code-review 包如何工作
 
