@@ -39,7 +39,7 @@ The preset id is `minimal-tools`; it must live at
 PowerShell (Windows):
 
 ```powershell
-irm https://raw.githubusercontent.com/<you>/<repo>/main/install.ps1 | iex
+irm https://raw.githubusercontent.com/Canson666/dsh-minimal-tools-preset/main/install.ps1 | iex
 ```
 
 or download and run locally:
@@ -51,7 +51,7 @@ powershell -ExecutionPolicy Bypass -File .\install.ps1
 Bash (macOS / Linux):
 
 ```bash
-bash <(curl -sL https://raw.githubusercontent.com/<you>/<repo>/main/install.sh)
+bash <(curl -sL https://raw.githubusercontent.com/Canson666/dsh-minimal-tools-preset/main/install.sh)
 # or locally:
 bash install.sh
 ```

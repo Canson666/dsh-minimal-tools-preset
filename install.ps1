@@ -1,6 +1,6 @@
 # install.ps1 — install the minimal-tools agent preset for DeepSeek Harness
 # Usage: powershell -ExecutionPolicy Bypass -File .\install.ps1
-#        irm https://raw.githubusercontent.com/<you>/<repo>/main/install.ps1 | iex
+#        irm https://raw.githubusercontent.com/Canson666/dsh-minimal-tools-preset/main/install.ps1 | iex
 
 $ErrorActionPreference = 'Stop'
 

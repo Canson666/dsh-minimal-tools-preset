@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # install.sh — install the minimal-tools agent preset for DeepSeek Harness
 # Usage: bash install.sh        (from the repo root)
-#        bash <(curl -sL https://raw.githubusercontent.com/<you>/<repo>/main/install.sh)
+#        bash <(curl -sL https://raw.githubusercontent.com/Canson666/dsh-minimal-tools-preset/main/install.sh)
 
 set -euo pipefail
 
